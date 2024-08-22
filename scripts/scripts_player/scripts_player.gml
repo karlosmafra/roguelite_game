@@ -1,17 +1,17 @@
 function scr_collision() {
 
-	if place_meeting(x + hspd, y, obj_block)
+	if place_meeting(x + hspd, y, obj_collisor)
 	{
-		while !place_meeting(x + sign(hspd), y, obj_block)
+		while !place_meeting(x + sign(hspd), y, obj_collisor)
 		{
 			x += sign(hspd)
 		}
 		hspd = 0
 	}
 
-	if place_meeting(x, y + vspd, obj_block)
+	if place_meeting(x, y + vspd, obj_collisor)
 	{
-		while !place_meeting(x, y + sign(vspd), obj_block)
+		while !place_meeting(x, y + sign(vspd), obj_collisor)
 		{
 			y += sign(vspd)
 		}

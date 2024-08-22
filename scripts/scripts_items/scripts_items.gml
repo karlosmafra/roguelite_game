@@ -9,11 +9,12 @@ function scr_pick_item(_item) {
 	
 }
 
-function create_item(_name, _sprite, _scr) constructor{
+function create_item(_name, _sprite, _scr, _price) constructor{
 	
 	name = _name
 	sprite = _sprite
 	scr = _scr
+	price = _price
 
 }
 
@@ -22,7 +23,7 @@ function scr_create_item_list()
 	
 	global.item_list =
 	[
-		new create_item("Heart", spr_heart, function() {with obj_player {hp = min(hp+1, max_hp)}}) 
+		new create_item("Heart", spr_heart, function() {with obj_player {hp = min(hp+1, max_hp)}}, 10) 
 	]
 	
 }

@@ -1,7 +1,7 @@
 function scr_enemy_idle(){
 	
 	// Verificar se o inimigo tem visão do player
-	var _line = collision_line(x, y, obj_player.x, obj_player.y, obj_block, 0, 0)
+	var _line = collision_line(x, y, obj_player.x, obj_player.y, obj_collisor, 0, 0)
 
 	if distance_to_object(obj_player) <= agg_range && !_line
 	{

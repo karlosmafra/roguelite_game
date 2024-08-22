@@ -99,7 +99,7 @@ for (var _w = 0; _w < grid_w; _w++)
 		{
 			if irandom(150) == 150
 			{
-				instance_create_layer(_w * cell_size + cell_size/2, _h * cell_size + cell_size/2, "Instances", obj_weapon_dropped, {weapon_num: irandom_range(1, 2)})
+				instance_create_layer(_w * cell_size + cell_size/2, _h * cell_size + cell_size/2, "Instances", obj_chest)
 			}
 			
 			tile_layer = layer_tilemap_get_id("Tiles_ground")
@@ -141,10 +141,10 @@ function generate_store() {
 			// Verifica se já existe uma loja, se os espaços ao redor são chão e se os espaços em cima são paredes
 			if _store == 0 && grid[# _w, _h] == 1 && grid[# _w-1, _h] == 1 && grid[# _w+1, _h] == 1 && grid[# _w, _h-1] == 0 && grid[# _w+1, _h-1] == 0 && grid[# _w-1, _h-1] == 0  &&  grid[# _w, _h+1] == 1 && grid[# _w-1, _h+1] == 1 && grid[# _w+1, _h+1] == 1
 			{
-				if irandom(30) == 30
+				if irandom(10) == 10 //30
 				{
 					instance_create_layer(_w * cell_size + cell_size/2, _h * cell_size + cell_size/2, "Instances", obj_store)
-					_store++
+					//_store++
 				}
 			}
 		}
@@ -159,4 +159,4 @@ while max_enemies > 3
 }
 generate_store()
 
-mp_grid_add_instances(mp_grid, obj_block, false)
+mp_grid_add_instances(mp_grid, obj_collisor, false)

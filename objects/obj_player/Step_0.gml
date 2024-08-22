@@ -49,7 +49,7 @@ if keyboard_check_pressed(vk_tab)
 
 if keyboard_check_pressed(ord("E")) 
 {
-	if distance_to_object(obj_pickup) < 8
+	if distance_to_object(obj_pickup) < 12
 	{
 		var _obj = instance_nearest(x, y, obj_pickup)
 		if _obj.object_index == obj_weapon_dropped
@@ -59,6 +59,13 @@ if keyboard_check_pressed(ord("E"))
 		else if _obj.object_index == obj_item
 		{
 			scr_pick_item(_obj)
+		}
+		else if _obj.object_index == obj_chest
+		{
+			with _obj
+			{
+				drop_weapon()
+			}
 		}
 	}
 }

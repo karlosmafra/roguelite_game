@@ -73,7 +73,7 @@ function scr_create_weapon_list() {
 
 	global.weapon_list = 
 	[
-	new create_weapon("Fists", -1, -1, 1, 0, 15, false, 0),
+	new create_weapon("Fists", -1, -1, 1, 0, 15, 0, false, 0),
 	new create_weapon("Pistol", spr_weapon, spr_projectile, 2, 8, 14, 0),
 	new create_weapon("UZI", spr_uzi, spr_projectile, 1, 9, 10, 20, true),
 	new create_weapon("Shotgun", spr_shotgun, spr_projectile, 1, 8, 60, 30, false, 3)

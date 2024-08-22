@@ -1,6 +1,6 @@
 hspd = 0
 vspd = 0
-spd = 1.5
+spd = 3.5 //1.5
 move_dir = 0
 dash_cd = 0
 
