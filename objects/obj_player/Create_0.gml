@@ -8,6 +8,8 @@ vulnerable = true
 max_hp = 6
 hp = max_hp
 
+can_shoot = true
+
 state = scr_player_walking
 
 instance_create_layer(x, y, layer, obj_camera)
